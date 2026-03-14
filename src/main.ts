@@ -77,7 +77,7 @@ Hooks.on("getSceneControlButtons", (controls: any[]) => {
     icon: "fas fa-border-style",
     visible: true,
     onClick: () => {
-      const app = new AutoWallsApp();
+      const app = new AutoWallsApp() as any;
       app.render(true);
     },
     button: true
