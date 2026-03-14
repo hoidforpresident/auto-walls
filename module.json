@@ -12,8 +12,7 @@
     "minimum": "13",
     "verified": "13"
   },
-  "esmodules": [
-    "dist/module.js"
+   "esmodules": [
   ],
   "scripts": [],
   "styles": [],
@@ -21,9 +20,9 @@
   "languages": [],
   "media": [],
   "relationships": {},
-  "url": "https://example.com/auto-walls",
-  "manifest": "https://example.com/auto-walls/module.json",
-  "download": "https://example.com/auto-walls/module.zip",
+  "url": "https://github.com/hoidforpresident/auto-walls",
+  "manifest": "https://github.com/hoidforpresident/auto-walls/releases/latest/download/module.json",
+  "download": "https://github.com/hoidforpresident/auto-walls/releases/latest/download/module.zip",
   "license": "LICENSE",
   "readme": "README.md",
   "flags": {}
