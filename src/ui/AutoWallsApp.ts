@@ -1,6 +1,8 @@
 declare const game: any;
 declare const canvas: any;
 declare const ui: any;
+declare const Application: any;
+type JQuery = any;
 
 const MODULE_ID = "auto-walls";
 
@@ -49,28 +51,28 @@ export class AutoWallsApp extends Application {
   activateListeners(html: JQuery): void {
     super.activateListeners(html);
 
-    html.find("button[name='detect']").on("click", (event) => {
+    html.find("button[name='detect']").on("click", (event: any) => {
       event.preventDefault();
       this._onDetect(html);
     });
 
-    html.find("button[name='clearPreview']").on("click", (event) => {
+    html.find("button[name='clearPreview']").on("click", (event: any) => {
       event.preventDefault();
       this._onClearPreview();
     });
 
-    html.find("button[name='commit']").on("click", (event) => {
+    html.find("button[name='commit']").on("click", (event: any) => {
       event.preventDefault();
       this._onCommit(html);
     });
 
-    html.find("button[name='cancel']").on("click", (event) => {
+    html.find("button[name='cancel']").on("click", (event: any) => {
       event.preventDefault();
       this.close();
     });
   }
 
-  close(options?: Partial<Application.CloseOptions> | undefined): Promise<void> {
+  close(options?: any): Promise<void> {
     clearPreview();
     return super.close(options);
   }
