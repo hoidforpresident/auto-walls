@@ -1,0 +1,61 @@
+<form class="auto-walls-app">
+  {{#if hasSceneBackground}}
+    <div class="form-group">
+      <label>Source Image</label>
+      <select name="source" disabled>
+        <option value="scene-background">Current scene background</option>
+      </select>
+      <p class="notes">Support for tiles and custom uploads can be added later.</p>
+    </div>
+
+    <div class="form-group">
+      <label>Detection Sensitivity</label>
+      <input type="number" name="sensitivity" min="0.1" max="1" step="0.05" value="{{sensitivity}}" />
+      <p class="notes">Higher values detect more edges but may add noise.</p>
+    </div>
+
+    <div class="form-group">
+      <label>Minimum Wall Length (px)</label>
+      <input type="number" name="minWallLength" min="1" step="1" value="{{minWallLength}}" />
+    </div>
+
+    <div class="form-group">
+      <label class="checkbox">
+        <input type="checkbox" name="snapToGrid" {{checked snapToGrid}} />
+        <span>Snap walls to grid</span>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label class="checkbox">
+        <input type="checkbox" name="mergeSegments" {{checked mergeSegments}} />
+        <span>Merge nearby segments</span>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label class="checkbox">
+        <input type="checkbox" name="invert" {{checked invert}} />
+        <span>Treat light areas as walls (invert)</span>
+      </label>
+    </div>
+
+    <footer class="sheet-footer flexrow">
+      <button type="button" name="detect" class="flex1">
+        <i class="fas fa-magic"></i> Detect
+      </button>
+      <button type="button" name="clearPreview" class="flex1">
+        <i class="fas fa-eraser"></i> Clear Preview
+      </button>
+      <button type="button" name="commit" class="flex1">
+        <i class="fas fa-check"></i> Commit Walls
+      </button>
+      <button type="button" name="cancel" class="flex1">
+        <i class="fas fa-times"></i> Cancel
+      </button>
+    </footer>
+  {{else}}
+    <p>No background image found on the current scene. Set a background before using Auto Walls.</p>
+  {{/if}}
+</form>
+

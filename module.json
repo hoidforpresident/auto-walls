@@ -1,0 +1,30 @@
+{
+  "id": "auto-walls",
+  "title": "Auto Walls",
+  "description": "Automatically detect and place walls on map images in Foundry VTT V13.",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Auto Walls Generator"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "esmodules": [
+    "dist/module.js"
+  ],
+  "scripts": [],
+  "styles": [],
+  "packs": [],
+  "languages": [],
+  "media": [],
+  "relationships": {},
+  "url": "https://example.com/auto-walls",
+  "manifest": "https://example.com/auto-walls/module.json",
+  "download": "https://example.com/auto-walls/module.zip",
+  "license": "LICENSE",
+  "readme": "README.md",
+  "flags": {}
+}
